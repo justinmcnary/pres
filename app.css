@@ -1,0 +1,98 @@
+body {
+  font-family:'Avenir';
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #191919;
+}
+
+.title h1 {
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px 0px;
+}
+
+#nav {
+  color: #2B2B2B;
+  background: #E9E581;
+  height: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  color: #2B2B2B;
+  letter-spacing: 1px;
+  font-size: inherit;
+  transition: all 0.3s;
+  -web-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  outline: none;
+}
+
+#message {
+  display: inline-block;
+  width: 20%;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+#question {
+  text-align: center;
+  background-color: #E9E581;
+  color: #2B2B2B;
+}
+
+.question {
+  list-style: none;
+  text-align: center;
+  background-color: #DFE2DB;
+  width: 20%;
+  height: 100px;
+  float: left;
+  margin: 1.66%;
+}
+
+#imageContainer{
+  background-color: white;
+  margin: 0px auto;
+  text-align: center;
+}
+
+#image {
+  max-width:560px;
+  max-height:290px;
+  width: auto;
+  height: auto;
+}
+
+#blurb{
+  margin: 20px;
+  padding-top: 60px;
+}
+
+.hidden {
+  display: none;
+};
+
+button:hover {
+  color: white;
+  background: lightgray;
+}
+
+li:hover {
+  background: #E9E581
+}
