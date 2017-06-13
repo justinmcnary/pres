@@ -25,6 +25,11 @@ body {
   margin-bottom: 20px;
 }
 
+button:hover {
+  color: white;
+  background: #DFE2DB;
+}
+
 button {
   border: none;
   background: none;
@@ -43,6 +48,8 @@ button {
 #message {
   display: inline-block;
   width: 20%;
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
 .container {
@@ -87,11 +94,6 @@ button {
 .hidden {
   display: none;
 };
-
-button:hover {
-  color: white;
-  background: lightgray;
-}
 
 li:hover {
   background: #E9E581

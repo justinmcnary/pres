@@ -12,7 +12,9 @@ var presidents = [
 ];
 
 var newButton = document.querySelector('#new');
+var nextButton = document.querySelector('#next');
 var resetButton = document.querySelector('#reset');
+var newGame = document.querySelector('#new-game');
 var questions = [];
 var presNum = document.querySelector('#pres-num');
 var question = document.querySelectorAll('.question');
@@ -29,6 +31,7 @@ var chances = 3;
 
 function newQ() {
   blurb.classList.add('hidden');
+  nextButton.classList.add('hidden');
   shuffleArray();
   randomQGen();
   pickPres();
@@ -41,9 +44,20 @@ newButton.addEventListener('click', function() {
   newQ();
 });
 
+nextButton.addEventListener('click', function() {
+  newQ();
+});
+
 resetButton.addEventListener('click', function() {
   score = 0;
   chances = 3;
+  newQ();
+});
+
+newGame.addEventListener('click', function() {
+  score = 0;
+  chances = 3;
+  newGame.classList.add('hidden');
   newQ();
 });
 
@@ -54,6 +68,7 @@ for(var i = 0; i < question.length; i++) {
       score++;
       message.textContent= 'Correct!';
       blurb.classList.remove('hidden');
+      nextButton.classList.remove('hidden');
     } else {
       chances--;
       updateScore(); 
@@ -61,7 +76,6 @@ for(var i = 0; i < question.length; i++) {
     };
   });
 };
-
 
 //Shuffle Presidential Data
 function shuffleArray(array) {
@@ -105,7 +119,11 @@ function updateScore() {
   scoreBox.textContent = `score: ${score}`;
   chanceBox.textContent = `chances: ${chances}`;
   if(score === 5) {
-    alert('WINNER ! Nice Job');
+    message.textContent= "WINNER!"
+    image.src = 'https://t3.ftcdn.net/jpg/01/07/31/48/240_F_107314824_sZFb5Gky3202H2x93do25iyYlpma3eul.jpg';
+    newGame.classList.remove('hidden');
+    blurb.textContent = 'Nice job, would you like to play again?';
+    blurb.classList.remove('hidden');
   } else if (chances === 0) {
     alert('Sorry you have lost, time to Study!');
   };
