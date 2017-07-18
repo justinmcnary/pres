@@ -71,6 +71,7 @@ button {
   height: 100px;
   float: left;
   margin: 1.66%;
+  cursor: pointer; cursor: hand;
 }
 
 #imageContainer{
